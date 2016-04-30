@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tutorials",
+  "name": "Tutorial Mod",
+  "description": "Examples and Instructions",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["sky01"],
+  "credits": "Textures made with Gimp 2.0",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
