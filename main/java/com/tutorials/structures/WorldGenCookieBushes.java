@@ -20,7 +20,7 @@ public class WorldGenCookieBushes extends WorldGenerator
 		Block cookieBush = rand.nextBoolean() ? TutorialBlocks.cookieBushFull : TutorialBlocks.cookieBushEmpty;
 		int y = 1 + getGroundFromAbove(worldIn, pos.getX(), pos.getZ());
 		// debug:
-		System.out.println("Y-value of ground is " + y + " at (" + pos.getX() + ", " + pos.getZ() + ")");
+		// System.out.println("Y-value of ground is " + y + " at (" + pos.getX() + ", " + pos.getZ() + ")");
 		// the Y we passed earlier will be used here as the minimum spawn height allowed
 		if(y >= pos.getY())
 		{
@@ -34,14 +34,14 @@ public class WorldGenCookieBushes extends WorldGenerator
 				// use 2 as the flag to prevent update -- you don't have to include that parameter
 				worldIn.setBlockState(bushPos, cookieBush.getDefaultState(), 2);
 				// debug:
-				System.out.println("placed a cookie bush!");
-			} else System.out.println("Sadly, this block is occupied by " + toReplace.getUnlocalizedName());
+				// System.out.println("placed a cookie bush!");
+			}   // else System.out.println("Sadly, this block is occupied by " + toReplace.getUnlocalizedName());
 		}
 		return false;
 	}
-	
+
 	// find a grass or dirt block to place the bush on
-	private int getGroundFromAbove(World world, int x, int z)
+	public static int getGroundFromAbove(World world, int x, int z)
 	{
 		int y = 255;
 		boolean foundGround = false;
@@ -51,7 +51,7 @@ public class WorldGenCookieBushes extends WorldGenerator
 			// "ground" for our bush is grass or dirt
 			foundGround = blockAt == Blocks.dirt || blockAt == Blocks.grass;
 		}
-		
+
 		return y;
 	}
 }
